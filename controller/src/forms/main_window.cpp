@@ -16,9 +16,11 @@ main_window::~main_window()
 }
 
 void main_window::on_pushButton_menu_clicked(){
-	std::cout << "Menu clicked" << std::endl;
 	//Open configuration menu
-	dialog_config_menu config_menu;
-	config_menu.setModal(true); //focus on dialog and doesn't have access to main_window
-	config_menu.exec();
+	//dialog_config_menu config_menu;
+	//config_menu.setModal(true); //focus on dialog and doesn't have access to main_window
+	//config_menu.exec();
+	hide(); // hide the main window
+	config_menu = new dialog_config_menu(this);
+	config_menu->show();
 }

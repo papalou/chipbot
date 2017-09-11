@@ -2,6 +2,7 @@
 #define MAIN_WINDOW_H
 
 #include <QMainWindow>
+#include "dialog_config_menu.h"
 
 namespace Ui {
 class main_window;
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::main_window *ui;
+	dialog_config_menu * config_menu;
 
 private slots:
 	void on_pushButton_menu_clicked();

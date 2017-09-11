@@ -21,6 +21,7 @@ private:
 private slots:
 	void on_pushButton_ok_clicked();
 	void on_pushButton_cancel_clicked();
+	void on_dialog_config_menu_finished(int result);
 };
 
 #endif // DIALOG_CONFIG_MENU_H
