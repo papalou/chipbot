@@ -1,2 +1,7 @@
+ChipBot Application
+
+Install dependency needed (debian):
+	sudo apt-get install -y qt-sdk
+
 1)make dev_env
 2)make release
