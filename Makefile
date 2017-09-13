@@ -1,25 +1,30 @@
 all:release
 
+RELEASE_PATH="./source/release/"
+CONTROLLER_SRC_PATH="./source/controller/"
+BOT_SRC_PATH="./source/bot/"
+LIBCOMMON_PATH="./source/libcommon/"
+
 release:controller bot
-	if [ -e ./release ]; then rm -rf ./release/; fi
-	mkdir ./release/
-	cp ./controller/chipbot_controller ./release/
-	cp ./bot/chipbot_receiver ./release/
+	if [ -e $(RELEASE_PATH) ]; then rm -rf $(RELEASE_PATH); fi
+	mkdir -p $(RELEASE_PATH)
+	cp ./source/controller_build/chipbot_controller $(RELEASE_PATH)
+	cp ./source/bot/chipbot_receiver $(RELEASE_PATH)
 
-controller:libcommon
-	cd controller && $(MAKE)
+controller:
+	cd $(CONTROLLER_SRC_PATH) && $(MAKE)
 
-bot:libcommon
-	cd bot && $(MAKE)
+bot:
+	cd $(BOT_SRC_PATH) && $(MAKE)
 
 libcommon:
-	cd libcommon && $(MAKE)
+	cd $(LIBCOMMON_PATH) && $(MAKE)
 
 clean:
-	if [ -e ./release ]; then rm -rf ./release/; fi
-	cd controller && $(MAKE) clean
-	cd bot && $(MAKE) clean
-	cd libcommon && $(MAKE) clean
+	if [ -e $(RELEASE_PATH) ]; then rm -rf $(RELEASE_PATH); fi
+	cd $(CONTROLLER_SRC_PATH) && $(MAKE) clean
+	cd $(BOT_SRC_PATH) && $(MAKE) clean
+	cd $(LIBCOMMON_PATH) && $(MAKE) clean
 
 dev_env:
 	echo "Create dev environement"
