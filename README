@@ -1,7 +1,22 @@
-ChipBot Application
+This project is the application for my CHIPbot.
 
-Install dependency needed (debian):
+The chipbot is a little robot build with a CHIP (9$ arm computer) and driven by the PocketCHIP.
+In the sources folder wee found the source code for the client and the server application.
+In the hardware folder wee found the plan for the CHIP shield on the robot.
+
+Build and Install:
+
+1)Install dependency needed (debian):
 	sudo apt-get install -y qt-sdk
 
-1)make dev_env
-2)make release
+2)Create the developement environement (checkout the needed lib)
+	make dev_env
+
+3)Build
+	make release
+
+4)Install the controller on the PocketCHIP
+	make install_controller
+
+5)Install the bot app on the CHIP
+	make install_bot
