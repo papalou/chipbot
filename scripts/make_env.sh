@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [ ! -e "libcommon" ]; then
+if [ ! -e "source/libcommon" ]; then
 	echo "Clone libcommon"
-	git clone https://github.com/papalou/libcommon.git
+	git clone https://github.com/papalou/libcommon.git source/libcommon
 fi
 
 echo "All done"
