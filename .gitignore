@@ -1,6 +1,2 @@
-libcommon/
+source/libcommon/
 *.o
-source/controller/.qmake.stash
-source/controller/Makefile
-source/controller/chipbot_controller
-
