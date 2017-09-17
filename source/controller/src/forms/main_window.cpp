@@ -3,16 +3,14 @@
 #include "ui_main_window.h"
 #include "dialog_config_menu.h"
 
-main_window::main_window(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::main_window)
+main_window::main_window(QWidget *parent) : QMainWindow(parent), ui(new Ui::main_window)
 {
-    ui->setupUi(this);
+	ui->setupUi(this);
 }
 
 main_window::~main_window()
 {
-    delete ui;
+	delete ui;
 }
 
 void main_window::on_pushButton_menu_clicked(){
