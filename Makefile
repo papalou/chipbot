@@ -30,6 +30,14 @@ dev_env:
 	echo "Create dev environement"
 	./scripts/make_env.sh
 
+install_controller:
+	echo "Install controller"
+	./scripts/install.sh "controller"
+
+install_bot:
+	echo "Install bot"
+	./scripts/install.sh "bot"
+
 .PHONY:all\
 release\
 controller\
@@ -37,3 +45,5 @@ bot\
 libcommon\
 clean\
 env\
+install_controller\
+install_bot
