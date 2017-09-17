@@ -1,10 +1,14 @@
 #include <QCoreApplication>
 
+#include "server.h"
 #include "log.h"
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+	write_log( "Start chipbot_bot");
 
-    return a.exec();
+	QCoreApplication a(argc, argv);
+	server communication_server;
+
+	return a.exec();
 }
