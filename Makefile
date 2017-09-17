@@ -1,6 +1,6 @@
 all:release
 
-RELEASE_PATH="./source/release/"
+RELEASE_PATH="./release/"
 CONTROLLER_SRC_PATH="./source/controller/"
 BOT_SRC_PATH="./source/bot/"
 LIBCOMMON_PATH="./source/libcommon/"
@@ -9,7 +9,7 @@ release:controller bot
 	if [ -e $(RELEASE_PATH) ]; then rm -rf $(RELEASE_PATH); fi
 	mkdir -p $(RELEASE_PATH)
 	cp ./source/controller_build/chipbot_controller $(RELEASE_PATH)
-	cp ./source/bot/chipbot_receiver $(RELEASE_PATH)
+	cp ./source/bot_build/chipbot_bot $(RELEASE_PATH)
 
 controller:
 	cd $(CONTROLLER_SRC_PATH) && $(MAKE)
